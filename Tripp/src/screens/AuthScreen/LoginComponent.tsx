@@ -3,7 +3,7 @@ import React from 'react'
 import CustomButton, { LoginButton } from '../../Components/CustomButton';
 import StyledText from '../../Components/StyledText';
 
-const LoginComponent = () => {
+const LoginComponent = ({ toggleComponent }) => {
   return (
    <View style={{}}>
    <StyledText style={{marginBottom:20,fontSize:18,lineHeight:22}}>Login/Signup</StyledText>
@@ -23,7 +23,9 @@ const LoginComponent = () => {
      </StyledText>
    </View>
    <View style={{alignItems:'center',marginTop:27.5}}>
-     <LoginButton title='Get started ' onPress={()=>{}} />
+     <LoginButton title='Get started ' onPress={() => {
+            // toggleComponent(); // Call the toggleComponent function to switch to OtpComponent
+          }} />
    </View>
  </View>
   )
